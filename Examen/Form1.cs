@@ -17,6 +17,8 @@ namespace Examen
 	{
 		public NotaRepositoryServices Services;
         List<Asignatura> asignaturas;
+        int Seleccionado = 0;
+       
 
 		public Form1(NotaRepositoryServices services)
 			
@@ -146,6 +148,14 @@ namespace Examen
         private void TxtDepartamento_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                Seleccionado = e.RowIndex;
+            }
         }
     }
 }

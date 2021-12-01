@@ -17,5 +17,25 @@ namespace AppCore.Services
 		{
 			this.Repository = repository;
 		}
-	}
+
+        public int CalcularPromedio()
+        {
+            return Repository.CalcularPromedio();
+        }
+
+        public Nota EstudianteById(int Id)
+        {
+            return Repository.EstudianteById(Id);
+        }
+
+        public ICollection<Asignatura> GetAsignaturas()
+        {
+            return Repository.GetAsignaturas();
+        }
+
+        public ICollection<Nota> MejoresEstudiantes()
+        {
+            return Repository.MejoresEstudiantes();
+        }
+    }
 }

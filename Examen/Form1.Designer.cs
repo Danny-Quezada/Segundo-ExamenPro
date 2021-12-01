@@ -47,7 +47,7 @@ namespace Examen
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(25, 56);
+            this.txtNombre.Location = new System.Drawing.Point(59, 179);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 0;
@@ -55,7 +55,7 @@ namespace Examen
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(25, 99);
+            this.txtApellido.Location = new System.Drawing.Point(59, 222);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 1;
@@ -63,7 +63,7 @@ namespace Examen
             // 
             // txtCArnet
             // 
-            this.txtCArnet.Location = new System.Drawing.Point(25, 146);
+            this.txtCArnet.Location = new System.Drawing.Point(59, 269);
             this.txtCArnet.Name = "txtCArnet";
             this.txtCArnet.Size = new System.Drawing.Size(100, 20);
             this.txtCArnet.TabIndex = 2;
@@ -72,7 +72,7 @@ namespace Examen
             // 
             // txtMunicipio
             // 
-            this.txtMunicipio.Location = new System.Drawing.Point(25, 187);
+            this.txtMunicipio.Location = new System.Drawing.Point(59, 310);
             this.txtMunicipio.Name = "txtMunicipio";
             this.txtMunicipio.Size = new System.Drawing.Size(100, 20);
             this.txtMunicipio.TabIndex = 3;
@@ -81,7 +81,7 @@ namespace Examen
             // 
             // txtDepartamento
             // 
-            this.txtDepartamento.Location = new System.Drawing.Point(25, 232);
+            this.txtDepartamento.Location = new System.Drawing.Point(59, 355);
             this.txtDepartamento.Name = "txtDepartamento";
             this.txtDepartamento.Size = new System.Drawing.Size(100, 20);
             this.txtDepartamento.TabIndex = 4;
@@ -90,7 +90,7 @@ namespace Examen
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(34, 293);
+            this.btnEnviar.Location = new System.Drawing.Point(68, 416);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(75, 23);
             this.btnEnviar.TabIndex = 11;
@@ -108,10 +108,11 @@ namespace Examen
             this.Carnet,
             this.Municipio,
             this.Departamento});
-            this.dataGridView1.Location = new System.Drawing.Point(131, 27);
+            this.dataGridView1.Location = new System.Drawing.Point(250, 119);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(643, 383);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // Nombre
             // 
@@ -147,7 +148,7 @@ namespace Examen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(926, 543);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.txtDepartamento);

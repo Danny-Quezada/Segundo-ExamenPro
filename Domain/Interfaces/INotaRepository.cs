@@ -12,7 +12,7 @@ namespace Domain.Interfaces
         // Aqui poner los metodos que se ocuparan para la clase Estudiante.
         int CalcularPromedio();
         ICollection<Nota> MejoresEstudiantes();
-        ICollection<Nota> GetAsignaturas();
-
+        ICollection<Asignatura> GetAsignaturas();
+        Nota EstudianteById(int Id);
 	}
 }

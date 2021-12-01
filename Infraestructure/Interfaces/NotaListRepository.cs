@@ -18,19 +18,38 @@ namespace Infraestructure.Interfaces
             return 1;
         }
 
-        public ICollection<Nota> GetAsignaturas()
+        public Nota EstudianteById(int Id)
         {
-            throw new NotImplementedException();
+            for(int i=0; i < datos.Count; i++)
+            {
+                if (Id == datos[i].Estudiante.Id)
+                {
+                    return datos[i];
+                }
+            }
+            return null;
         }
 
-        public ICollection<Estudiante> MejoresEstudiantes()
+        public ICollection<Asignatura> GetAsignaturas()
         {
-            throw new NotImplementedException();
+
+           for(int i=0; i<datos.Count; i++)
+            {
+                return datos[i].Asignaturas;
+            }
+            return null;
         }
 
-        ICollection<Nota> INotaRepository.MejoresEstudiantes()
+        public ICollection<Nota> MejoresEstudiantes()
         {
-            throw new NotImplementedException();
+            List<Nota> MejoresNotas = new List<Nota>();
+            datos.OrderBy(x => x.NotaFinal);
+            for(int i=0; i<2; i++)
+            {
+                MejoresNotas.Add(datos[i]);
+            }
+            return MejoresNotas;
         }
+
     }
 }
