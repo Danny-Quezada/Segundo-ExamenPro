@@ -155,6 +155,11 @@ namespace Examen
             if (e.RowIndex >= 0)
             {
                 Seleccionado = e.RowIndex;
+                int id =Convert.ToInt32( dataGridView1.Rows[Seleccionado].Cells["ID"].Value);
+                FrmNotas frmNotas = new FrmNotas( id);
+                frmNotas.Services = Services;
+                frmNotas.ShowDialog();
+                
             }
         }
     }

@@ -72,3 +72,4 @@ C:\Users\JADPA_15\Desktop\ExamenProgramacion\SegundoExamen\Examen\bin\Debug\Syst
 C:\Users\JADPA_15\Desktop\ExamenProgramacion\SegundoExamen\Examen\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\JADPA_15\Desktop\ExamenProgramacion\SegundoExamen\Examen\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\JADPA_15\Desktop\ExamenProgramacion\SegundoExamen\Examen\obj\Debug\Examen.csproj.CopyComplete
+C:\Users\JADPA_15\Desktop\ExamenProgramacion\SegundoExamen\Examen\obj\Debug\Examen.FrmNotas.resources

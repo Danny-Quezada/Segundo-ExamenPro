@@ -15,7 +15,8 @@ namespace Infraestructure.Interfaces
         // Aqui van a ir los metodos de IEstudianteRepository y ocupar la lista datos.
         public int CalcularPromedio()
         {
-            return 1;
+            decimal promedio = datos.Sum(x => x.NotaFinal);
+            return Convert.ToInt32(promedio/6);
         }
 
         public Nota EstudianteById(int Id)
@@ -33,11 +34,10 @@ namespace Infraestructure.Interfaces
         public ICollection<Asignatura> GetAsignaturas()
         {
 
-           for(int i=0; i<datos.Count; i++)
-            {
-                return datos[i].Asignaturas;
-            }
-            return null;
+            List<Asignatura> asignaturas = new List<Asignatura>();
+            asignaturas =(List<Asignatura>) datos.Select(x => x.Asignaturas);
+            return asignaturas;
+            
         }
 
         public ICollection<Nota> MejoresEstudiantes()

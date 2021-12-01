@@ -13,7 +13,7 @@ namespace AppCore.Interfaces
          Nota EstudianteById(int Id);
         int CalcularPromedio();
         ICollection<Nota> MejoresEstudiantes();
-        ICollection<Nota> GetAsignaturas();
+        ICollection<Asignatura> GetAsignaturas();
 
     }
 }
