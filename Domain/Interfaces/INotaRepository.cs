@@ -13,6 +13,8 @@ namespace Domain.Interfaces
         int CalcularPromedio();
         ICollection<Nota> MejoresEstudiantes();
         ICollection<Asignatura> GetAsignaturas();
-        Nota EstudianteById(int Id);
+        Estudiante EstudianteById(int Id);
+       int CalcularNotas(int primer, int segundo);
+       
 	}
 }

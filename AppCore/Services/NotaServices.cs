@@ -18,12 +18,17 @@ namespace AppCore.Services
 			this.Repository = repository;
 		}
 
+        public int CalcularNotas(int primer, int segundo)
+        {
+            return Repository.CalcularNotas(primer, segundo);
+        }
+
         public int CalcularPromedio()
         {
             return Repository.CalcularPromedio();
         }
 
-        public Nota EstudianteById(int Id)
+        public Estudiante EstudianteById(int Id)
         {
             return Repository.EstudianteById(Id);
         }

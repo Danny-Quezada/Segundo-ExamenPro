@@ -10,10 +10,11 @@ namespace AppCore.Interfaces
 	public interface NotaRepositoryServices: IServices<Nota>
 	{
         // Aqui van todos los metodos de IEstudianteRepository
-         Nota EstudianteById(int Id);
+         Estudiante EstudianteById(int Id);
         int CalcularPromedio();
         ICollection<Nota> MejoresEstudiantes();
         ICollection<Asignatura> GetAsignaturas();
+        int CalcularNotas(int primer, int segundo);
 
     }
 }

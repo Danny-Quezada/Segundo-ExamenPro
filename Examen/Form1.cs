@@ -17,12 +17,14 @@ namespace Examen
 	{
 		public NotaRepositoryServices Services;
         List<Asignatura> asignaturas;
+        Estudiante estudiante;
         int Seleccionado = 0;
-       
+        int Siguiente = 0;
 
 		public Form1(NotaRepositoryServices services)
 			
 		{
+            estudiante = new Estudiante();
             asignaturas = new List<Asignatura>();
 			this.Services = services;
 			InitializeComponent();
@@ -40,7 +42,7 @@ namespace Examen
 
         private void BtnEnviar_Click(object sender, EventArgs e)
         {
-            Estudiante estudiantes = new Estudiante()
+            estudiante = new Estudiante()
             {
                 Id = Services.GetLastId() + 1,
                 Nombres = txtNombre.Text,
@@ -52,13 +54,17 @@ namespace Examen
             AgregarAsignaturas();
             Nota Notas = new Nota()
             {
-                Estudiante = estudiantes,
+                Estudiante = estudiante,
                 Asignaturas = asignaturas,
-
+                
             };
             Services.Create(Notas);
             LlenarDgv();
             Vaciar();
+            txtSegundo.Visible = true;
+            txtPrimer.Visible = true;
+            txtSistematico.Visible= true;
+            btnSiguiente.Visible = true;
         }
         private void Vaciar()
         {
@@ -130,10 +136,7 @@ namespace Examen
         {
 
         }
-        private void VerificarClases()
-        {
-
-        }
+       
 
         private void TxtMunicipio_TextChanged(object sender, EventArgs e)
         {
@@ -161,6 +164,31 @@ namespace Examen
                 frmNotas.ShowDialog();
                 
             }
+        }
+
+        private void TxtPrimer_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSiguiente_Click(object sender, EventArgs e)
+        {
+            Siguiente++;
+            if (Siguiente == 6)
+            {
+                return;
+                MessageBox.Show("Notas registradas");
+            }
+            Nota notas = new Nota()
+            {
+                Estudiante = estudiante,
+                Asignaturas = asignaturas,
+                PrimerParcial = Convert.ToInt16(txtPrimer.Text),
+                SegundoParcial=Convert.ToInt16(txtSegundo.Text),
+                Sistematico=Convert.ToInt16(txtSistematico.Text),
+            };
+            Services.Create(notas);
+
         }
     }
 }

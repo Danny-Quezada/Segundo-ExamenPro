@@ -14,5 +14,6 @@ namespace Domain.Entities
         public int PrimerParcial { get; set; }
         public int SegundoParcial { get; set; }
         public int NotaFinal => Sistematico + PrimerParcial + SegundoParcial;
-    }
+        public Asignatura Asig { get; set; }
+}
 }

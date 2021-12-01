@@ -10,22 +10,24 @@ namespace Infraestructure.Interfaces
 {
     public class NotaListRepository : BaseRepository<Nota>, INotaRepository
     {
+        public int CalcularNotas(int primer, int segundo)
+        {
+            throw new NotImplementedException();
+        }
 
-
-        // Aqui van a ir los metodos de IEstudianteRepository y ocupar la lista datos.
         public int CalcularPromedio()
         {
             decimal promedio = datos.Sum(x => x.NotaFinal);
             return Convert.ToInt32(promedio/6);
         }
 
-        public Nota EstudianteById(int Id)
+        public Estudiante EstudianteById(int Id)
         {
             for(int i=0; i < datos.Count; i++)
             {
                 if (Id == datos[i].Estudiante.Id)
                 {
-                    return datos[i];
+                    return datos[i].Estudiante;
                 }
             }
             return null;
