@@ -27,5 +27,10 @@ namespace Infraestructure.Interfaces
         {
             throw new NotImplementedException();
         }
+
+        ICollection<Nota> INotaRepository.MejoresEstudiantes()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

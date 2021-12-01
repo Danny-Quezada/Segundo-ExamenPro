@@ -11,7 +11,7 @@ namespace Domain.Interfaces
 	{
         // Aqui poner los metodos que se ocuparan para la clase Estudiante.
         int CalcularPromedio();
-        ICollection<Estudiante> MejoresEstudiantes();
+        ICollection<Nota> MejoresEstudiantes();
         ICollection<Nota> GetAsignaturas();
 
 	}

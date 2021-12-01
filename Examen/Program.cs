@@ -19,7 +19,7 @@ namespace Examen
 		[STAThread]
 		static void Main()
 		{
-			Application.EnableVisualStyles();
+		Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			var builder = new ContainerBuilder();
 
